@@ -29,6 +29,8 @@ public class NewsActivity extends AppCompatActivity {
         postWebView.getSettings().setBuiltInZoomControls(true);
         postWebView.loadUrl(myWebLink);
 
+
+        //
     }
 
     private class MyBrowser extends WebViewClient {
