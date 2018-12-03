@@ -64,10 +64,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         ImageView imageView;
         TextView textView;
 
-        TextView tvLike;
-        ImageButton iBtnLike;
-        int likeCounter = 0;
-
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -85,17 +81,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
             textView = itemView.findViewById(R.id.title);
 
-            tvLike = itemView.findViewById(R.id.counter);
-            iBtnLike = itemView.findViewById(R.id.like);
 
-            iBtnLike.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(context, "like clicked", Toast.LENGTH_SHORT).show();
-                    likeCounter++;
-                    tvLike.setText("" + likeCounter);
-                }
-            });
 
         }
 

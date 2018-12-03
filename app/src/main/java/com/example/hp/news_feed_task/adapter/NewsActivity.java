@@ -25,6 +25,7 @@ public class NewsActivity extends AppCompatActivity {
         }
         postWebView = (WebView) findViewById(R.id.postWebView);
         postWebView.setWebViewClient(new MyBrowser());
+        postWebView.getSettings().setJavaScriptEnabled(true);
         postWebView.getSettings().setBuiltInZoomControls(true);
         postWebView.loadUrl(myWebLink);
 
@@ -37,4 +38,16 @@ public class NewsActivity extends AppCompatActivity {
             return true;
         }
     }
+
+    public void onBackPressed(){
+
+        if(postWebView.canGoBack()){
+            postWebView.goBack();
+        }
+        else{
+            super.onBackPressed();
+        }
+    }
+
+
 }
